@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class CreateAccountPage extends StatefulWidget {
+  const CreateAccountPage({super.key});
+
   @override
   _CreateAccountPageState createState() => _CreateAccountPageState();
 }

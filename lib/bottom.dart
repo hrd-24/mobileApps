@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:ppkd_aps/bussines/bussines.dart';
 import 'package:ppkd_aps/bussines/stack/stack_screen.dart';
 import 'package:ppkd_aps/grid/gridView.dart';
-import 'package:ppkd_aps/home%20copy/home.dart';
+import 'package:ppkd_aps/home/home.dart';
 import 'package:ppkd_aps/school/schoolModel.dart';
 
 // void main() => runApp(const BottomNavigationBarExampleApp());
@@ -28,7 +28,7 @@ class _BottomNavigationBarExampleState
     extends State<BottomNavigationBarExample> {
   int _selectedIndex = 0;
 
-  List<Widget> _widgetOptions = <Widget>[
+  final List<Widget> _widgetOptions = <Widget>[
     HomeScreen(), // Reference the HomeScreen widget
     BusinessScreen(), // Reference the BusinessScreen widget
     SchoolScreen(), // Reference the SchoolScreen widget

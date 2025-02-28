@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:ppkd_aps/data/modelName.dart';
 
 class SchoolScreen extends StatelessWidget {
+  const SchoolScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
