@@ -7,7 +7,7 @@ class GridScreen extends StatelessWidget {
     return Scaffold(
         appBar: AppBar(
           title: const Text('Grid Screen'),
-          backgroundColor: Colors.brown,
+          backgroundColor: Colors.grey,
         ),
         body: GridView.count(
           // Create a grid with 2 columns.

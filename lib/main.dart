@@ -33,39 +33,48 @@ class _LoginScreenState extends State<LoginScreen> {
   String _createdPassword = '';
   // String _createdPhoneNumber = '';
 
-  // Function to handle login
-  void _login() {
-    String username = _usernameController.text;
-    String password = _passwordController.text;
+// Function to handle login
+void _login() {
+  String username = _usernameController.text;
+  String password = _passwordController.text;
 
-    // Check if entered credentials match the created account credentials
-    if (username == _createdUsername && password == _createdPassword) {
-      // Successfully logged in, navigate to HelloWorld screen
-      Navigator.push(
-        context,
-        MaterialPageRoute(builder: (context) => BottomNavigationBarExample()), // Navigate to HelloWorld
-      );
-    } else {
-      // Show an error message if credentials are incorrect
-      showDialog(
-        context: context,
-        builder: (BuildContext context) {
-          return AlertDialog(
-            title: Text("Login Failed"),
-            content: Text("Invalid username or password."),
-            actions: [
-              TextButton(
-                child: Text("OK"),
-                onPressed: () {
-                  Navigator.of(context).pop();
-                },
-              ),
-            ],
-          );
-        },
-      );
-    }
+  // Check if entered credentials match the default admin credentials
+  if (username == 'admin' && password == '123') {
+    // Successfully logged in, navigate to HelloWorld screen
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => BottomNavigationBarExample()), // Navigate to HelloWorld
+    );
   }
+  // Else check if the entered credentials match the created account credentials
+  else if (username == _createdUsername && password == _createdPassword) {
+    // Successfully logged in, navigate to HelloWorld screen
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => BottomNavigationBarExample()), // Navigate to HelloWorld
+    );
+  } else {
+    // Show an error message if credentials are incorrect
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: Text("Login Failed"),
+          content: Text("Invalid username or password."),
+          actions: [
+            TextButton(
+              child: Text("OK"),
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
+            ),
+          ],
+        );
+      },
+    );
+  }
+}
+
 
   // Navigate to the Create Account screen and get the created account data
   void _navigateToCreateAccount() async {
