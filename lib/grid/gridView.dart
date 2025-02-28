@@ -3,11 +3,8 @@ import 'package:flutter/material.dart';
 class GridScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    const title = 'Grid List';
 
-    return MaterialApp(
-      title: title,
-      home: Scaffold(
+    return Scaffold(
         appBar: AppBar(
           title: const Text('Grid Screen'),
           backgroundColor: Colors.brown,
@@ -27,7 +24,7 @@ class GridScreen extends StatelessWidget {
             );
           }),
         ),
-      ),
-    );
+      );
+    
   }
 }
