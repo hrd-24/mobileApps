@@ -4,6 +4,7 @@ import 'package:ppkd_aps/bussines/stack/stack_screen.dart';
 import 'package:ppkd_aps/grid/gridView.dart';
 import 'package:ppkd_aps/home%20copy/home.dart';
 import 'package:ppkd_aps/school/schoolModel.dart';
+import 'package:ppkd_aps/tes/tes.dart';
 
 // void main() => runApp(const BottomNavigationBarExampleApp());
 
@@ -34,6 +35,7 @@ class _BottomNavigationBarExampleState
     SchoolScreen(), // Reference the SchoolScreen widget
     StackScreen(), // Reference the StackScreen widget
     GridScreen(), // Reference the GridScreen widget
+    TesScreen(), // Reference the GridScreen widget
   ];
 
   void _onItemTapped(int index) {
@@ -54,6 +56,7 @@ class _BottomNavigationBarExampleState
           BottomNavigationBarItem(icon: Icon(Icons.school), label: 'School'),
           BottomNavigationBarItem(icon: Icon(Icons.table_bar), label: 'Stack'),
           BottomNavigationBarItem(icon: Icon(Icons.grid_3x3), label: 'School'),
+          BottomNavigationBarItem(icon: Icon(Icons.android), label: 'Tes Page'),
         ],
         currentIndex: _selectedIndex,
         selectedItemColor: Colors.amber[800],
