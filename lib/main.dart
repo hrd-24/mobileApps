@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:ppkd_aps/bottom.dart';
 import 'package:ppkd_aps/createLogin/create.dart';
+import 'package:ppkd_aps/screen/splash.dart';
 // import 'package:ppkd_aps/home/hello_world.dart';
 
 void main() {
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Login Demo',
       theme: ThemeData(primarySwatch: Colors.blue),
-      home: LoginScreen(), // Set LoginScreen as the home screen
+      home: SplasScreen(), // Set LoginScreen as the home screen
     );
   }
 }
@@ -43,7 +44,7 @@ void _login() {
   String password = _passwordController.text;
 
   // Check if entered credentials match the default admin credentials
-  if (username == 'admin' && password == '123') {
+  if (username == 'a' && password == 'a') {
     // Successfully logged in, navigate to HelloWorld screen
     Navigator.push(
       context,

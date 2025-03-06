@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:ppkd_aps/bussines/bussines.dart';
-import 'package:ppkd_aps/bussines/stack/stack_screen.dart';
+import 'package:ppkd_aps/dropdown/dropDownMain.dart';
+import 'package:ppkd_aps/mapFunction/map.dart';
+import 'package:ppkd_aps/stack/stack_screen.dart';
+import 'package:ppkd_aps/drawer/drawer.dart';
 import 'package:ppkd_aps/grid/gridView.dart';
-import 'package:ppkd_aps/home/home.dart';
-import 'package:ppkd_aps/school/schoolModel.dart';
+import 'package:ppkd_aps/listFunction/list.dart';
+import 'package:ppkd_aps/modelFunction/model.dart';
 import 'package:ppkd_aps/tes/tes.dart';
+import 'package:ppkd_aps/tugas_figma/lib/figma.dart';
 
 // void main() => runApp(const BottomNavigationBarExampleApp());
 
@@ -30,9 +33,11 @@ class _BottomNavigationBarExampleState
   int _selectedIndex = 0;
 
   final List<Widget> _widgetOptions = <Widget>[
-    HomeScreen(), // Reference the HomeScreen widget
-    BusinessScreen(), // Reference the BusinessScreen widget
-    SchoolScreen(), // Reference the SchoolScreen widget
+    DrawerScreen(), // Reference the DrawerScreen widget
+    HomeScreen(), // Reference the DropdownMenuExample widget
+    // ListScreen(), // Reference the HomeScreen widget
+    // MapScreen(), // Reference the BusinessScreen widget
+    // ModelScreen(), // Reference the SchoolScreen widget
     StackScreen(), // Reference the StackScreen widget
     GridScreen(), // Reference the GridScreen widget
     TesScreen(), // Reference the GridScreen widget
@@ -51,11 +56,13 @@ class _BottomNavigationBarExampleState
       body: _widgetOptions.elementAt(_selectedIndex),
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
-          BottomNavigationBarItem(icon: Icon(Icons.business),label: 'Business',),
-          BottomNavigationBarItem(icon: Icon(Icons.school), label: 'School'),
+          BottomNavigationBarItem(icon: Icon(Icons.list), label: 'Drawer'),
+          BottomNavigationBarItem(icon: Icon(Icons.add_box), label: 'Dropdown'),
+          // BottomNavigationBarItem(icon: Icon(Icons.home), label: 'List'),
+          // BottomNavigationBarItem(icon: Icon(Icons.business),label: 'Map',),
+          // BottomNavigationBarItem(icon: Icon(Icons.school), label: 'Model'),
           BottomNavigationBarItem(icon: Icon(Icons.table_bar), label: 'Stack'),
-          BottomNavigationBarItem(icon: Icon(Icons.grid_3x3), label: 'School'),
+          BottomNavigationBarItem(icon: Icon(Icons.grid_3x3), label: 'Grid'),
           BottomNavigationBarItem(icon: Icon(Icons.android), label: 'Tes Page'),
         ],
         currentIndex: _selectedIndex,

@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:ppkd_aps/data/map_name.dart';
 
-class BusinessScreen extends StatelessWidget {
-  const BusinessScreen({super.key});
+class MapScreen extends StatelessWidget {
+  const MapScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
  appBar: AppBar(
-        title: const Text('Business Screen'),
+        title: const Text('Map Screen'),
         backgroundColor: const Color.fromARGB(255, 235, 93, 83),
       ),      body: ListView.builder(
         itemCount: mapName.length,

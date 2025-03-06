@@ -10,7 +10,7 @@ class TesScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Grid Screen'),
+        title: const Text('Tes Screen'),
         backgroundColor: Colors.grey,
       ),
       body: Stack(

@@ -1,4 +1,4 @@
-List listName = [
+const List<String> listName = [
   '1. Greenwood High School',
   '2. Sunnydale Elementary',
   '3. Riverdale High',
