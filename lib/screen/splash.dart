@@ -1,7 +1,6 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:ppkd_aps/login/loginHrd.dart';
+import 'package:ppkd_aps/introduction/welcome_screen.dart';
 
 class SplasScreen extends StatefulWidget {
   const SplasScreen({super.key});
@@ -17,10 +16,10 @@ class _SplasScreenState extends State<SplasScreen>
     super.initState();
     SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersive);
 
-    Future.delayed(Duration(seconds: 5), () {
+    Future.delayed(Duration(seconds: 2), () {
       Navigator.of(
         context,
-      ).pushReplacement(MaterialPageRoute(builder: (_) => LoginScreen()));
+      ).pushReplacement(MaterialPageRoute(builder: (_) => OnboardingScreen()));
     });
   }
 
@@ -38,21 +37,17 @@ class _SplasScreenState extends State<SplasScreen>
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        width: double.infinity
-      ,
+        width: double.infinity,
         decoration: const BoxDecoration(
-          gradient: LinearGradient(
-            colors: [Colors.yellow, Colors.green],
-            
-          ),
+          gradient: LinearGradient(colors: [Color.fromARGB(255, 107, 101, 43), Color.fromARGB(255, 37, 155, 41)]),
         ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: const [
-            Icon(Icons.edit, size: 80, color: Colors.amber),
+          children: [
+            Image.asset('assets/images/fitur.png'),
             SizedBox(height: 20),
             Text(
-              'TIPS',
+              'OKE GAS',
               style: TextStyle(
                 fontStyle: FontStyle.italic,
                 color: Colors.white,

@@ -57,7 +57,7 @@ class _BottomNavigationBarExampleState
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(icon: Icon(Icons.list), label: 'Drawer'),
-          BottomNavigationBarItem(icon: Icon(Icons.add_box), label: 'Dropdown'),
+          BottomNavigationBarItem(icon: Icon(Icons.add_box), label: 'Quis'),
           // BottomNavigationBarItem(icon: Icon(Icons.home), label: 'List'),
           // BottomNavigationBarItem(icon: Icon(Icons.business),label: 'Map',),
           // BottomNavigationBarItem(icon: Icon(Icons.school), label: 'Model'),
