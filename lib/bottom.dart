@@ -1,11 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:ppkd_aps/dropdown/dropDownMain.dart';
-import 'package:ppkd_aps/mapFunction/map.dart';
+import 'package:ppkd_aps/kontak/sample_kontak.dart';
 import 'package:ppkd_aps/stack/stack_screen.dart';
-import 'package:ppkd_aps/drawer/drawer.dart';
 import 'package:ppkd_aps/grid/gridView.dart';
-import 'package:ppkd_aps/listFunction/list.dart';
-import 'package:ppkd_aps/modelFunction/model.dart';
 import 'package:ppkd_aps/tes/tes.dart';
 import 'package:ppkd_aps/tugas_figma/lib/figma.dart';
 
@@ -33,7 +29,7 @@ class _BottomNavigationBarExampleState
   int _selectedIndex = 0;
 
   final List<Widget> _widgetOptions = <Widget>[
-    DrawerScreen(), // Reference the DrawerScreen widget
+    SampleKontak(), // Reference the DrawerScreen widget
     HomeScreen(), // Reference the DropdownMenuExample widget
     // ListScreen(), // Reference the HomeScreen widget
     // MapScreen(), // Reference the BusinessScreen widget
